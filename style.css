@@ -81,7 +81,7 @@
 }
 
 
-
+/* GRID */
 .grid-container {
     background-color: rgb(221, 32, 32);
     padding: 40px 40px 80px 40px;
@@ -96,6 +96,10 @@
     background-color: var(--secondary-light);
     box-shadow: rgb(0 0 0 / 50%) 0px 3px 8px;
 }
+.grid-element {
+    background-color: cadetblue;
+}
+
 
 .circle1,
 .circle2 {

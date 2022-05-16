@@ -7,6 +7,8 @@ const btnClear = document.querySelector("#btnClear");
 const gridSlider = document.querySelector("#gridSlider");
 const circle1 = document.querySelector("#circle1");
 const circle2 = document.querySelector("#circle2");
+const grid = document.querySelector("#grid");
+const gridEls = document.querySelectorAll(".grid-element");
 const currentYear = document.getElementById("currentYear");
 
 currentYear.textContent = new Date().getFullYear();
@@ -39,12 +41,12 @@ function removeClass(el, className) {
 */
 }
 
-document.body.addEventListener("click", print);
-function print(e) {
-  console.log(e);
-}
+// document.body.addEventListener("click", print);
+// function print(e) {
+//   console.log(e);
+// }
 
-//add event listeners to all buttons
+//button event listeners
 for (let button of Array.from(buttons)) {
   button.addEventListener("click", updateActiveButton);
 }
@@ -56,7 +58,7 @@ function updateActiveButton(e) {
     btnClear.style.backgroundColor = "#ededed";
     btnClear.style.color = "#333";
     btnClear.style.transform = "scale(1.00)";
-    // clearGrid();
+    clearGrid();
     addClass(btnColor, "active");
   } else {
     removeActive();
@@ -74,6 +76,27 @@ function removeActive() {
 
 function activeButton(e) {
   e.preventDefault();
-  console.log(e);
   addClass(e.target, "active");
+}
+
+//grid event listeners
+for (let gridEl of Array.from(gridEls)) {
+  gridEl.addEventListener("click", updateGridEl);
+  // .addEventListener("mouseup",stopUpdateGridEl)
+}
+
+function updateGridEl(e) {
+  e.stopPropagation();
+  let element = e.target;
+  let chosenColor = colorPicker.value;
+  if (element.style.backgroundColor !== chosenColor)
+    element.style.backgroundColor = chosenColor;
+  else if (element.style.backgroundColor === chosenColor)
+    element.style.backgroundColor = "#fefefe";
+}
+
+function clearGrid() {
+  for (let gridEl of Array.from(gridEls)) {
+    gridEl.style.backgroundColor = "#fefefe";
+  }
 }
