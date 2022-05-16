@@ -50,9 +50,14 @@ for (let button of Array.from(buttons)) {
 }
 
 function updateActiveButton(e) {
-  if (e.target.id === "buttonClear") {
+  if (e.target.id === "btnClear") {
+    //prevent clear button from being styled upon click
     removeActive();
+    btnClear.style.backgroundColor = "#ededed";
+    btnClear.style.color = "#333";
+    btnClear.style.transform = "scale(1.00)";
     // clearGrid();
+    addClass(btnColor, "active");
   } else {
     removeActive();
     activeButton(e);
