@@ -49,6 +49,7 @@
  display: flex;
  flex-direction: column;
  gap: 30px;
+ width: 200px;
 }
 
 #colorPicker {
@@ -82,8 +83,9 @@
 
 .grid-container {
     background-color: rgb(221, 32, 32);
-    padding: 40px;
+    padding: 40px 40px 80px 40px;
     border-radius: 15px;
+    position: relative;
 
 }
 .grid {
@@ -94,6 +96,37 @@
     box-shadow: rgb(0 0 0 / 50%) 0px 3px 8px;
 }
 
+.circle1,
+.circle2 {
+    border-radius: 50%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+.circle1 {
+    left:15px;
+    bottom:15px;
+}
+.circle2 {
+    right:15px;
+    bottom:15px;
+}
+
+.etchTitle {
+    font-family: "Brush Script MT";
+    font-size: 32px;
+    color: gold;
+    text-shadow: 2px 2px #333;
+    width: auto;
+    position: absolute;
+    margin-left: auto;
+margin-right: auto;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
 /* FOOTER */
 .footer {
     position: absolute;
