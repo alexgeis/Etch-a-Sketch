@@ -40,6 +40,7 @@
 .main-container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 100px;
 }
 
@@ -97,3 +98,45 @@
 .footer img:hover {
     transform: rotate(360deg) scale(1.2);
 }
+
+@media (max-width: 1200px) {
+    .main-container {
+      justify-content: center;
+    }
+  }
+
+@media (max-width: 850px) {
+    .main-container {
+      gap: 50px;
+    }
+  
+    .settings {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    /* .size-value {
+      margin-bottom: -4px;
+    } */
+  
+    .grid {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+@media (max-width: 768px) {
+    .title {
+      font-size: 50px;
+    }
+  
+    .main-container {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  
+    .grid {
+      width: 300px;
+      height: 300px;
+    }
+  }
