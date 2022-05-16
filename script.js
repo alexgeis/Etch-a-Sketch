@@ -7,9 +7,9 @@ const btnClear = document.querySelector("#btnClear");
 const gridSlider = document.querySelector("#gridSlider");
 const circle1 = document.querySelector("#circle1");
 const circle2 = document.querySelector("#circle2");
-const currentYear = document.querySelector("#currentYear");
+const currentYear = document.getElementById("currentYear");
 
-currentYear.textContent = document.write(new Date().getFullYear());
+currentYear.textContent = new Date().getFullYear();
 
 // HELPER FUNCTIONS
 function hasClass(el, className) {
