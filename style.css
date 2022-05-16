@@ -39,6 +39,7 @@
 /* MAIN */
 .main-container {
     display: flex;
+    justify-content: center;
     gap: 100px;
 }
 
@@ -46,6 +47,7 @@
 .settings {
  display: flex;
  flex-direction: column;
+ gap: 30px;
 }
 
 .btn {
@@ -53,8 +55,18 @@
     border: 1px solid var(--primary-dark);
     border-radius: 5px;
 }
-.grid {
+.grid-container {
+    background-color: rgb(221, 32, 32);
+    padding: 40px;
+    border-radius: 15px;
 
+}
+.grid {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    background-color: var(--secondary-light);
+    box-shadow: rgb(0 0 0 / 50%) 0px 3px 8px;
 }
 
 /* FOOTER */
