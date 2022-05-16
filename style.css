@@ -54,12 +54,32 @@
 #colorPicker {
     width: 100%;
 }
+.btn,
+#colorPicker {
+  transition: transform 0.1s ease-in-out;
+}
+.btn:hover,
+#colorPicker:hover {
+  transform: scale(1.05);
+}
 
 .btn {
     padding: 10px 20px;
     border: 1px solid var(--primary-dark);
     border-radius: 5px;
 }
+.btn:hover {
+    background: var(--primary-dark);
+    color: var(--secondary-light)
+}
+.btn.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+    transform: scale(1.05);
+  }
+
+
+
 .grid-container {
     background-color: rgb(221, 32, 32);
     padding: 40px;
