@@ -123,3 +123,30 @@ for (let gridEl of Array.from(gridEls)) {
 //  e.target.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
 
 //change grid size
+
+// function setupGrid(size) {
+//     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
+//     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
+
+//     for (let i = 0; i < size * size; i++) {
+//       const gridElement = document.createElement('div')
+//       gridElement.classList.add("grid-element")
+//       gridElement.addEventListener('mouseover', changeColor)
+//       gridElement.addEventListener('mousedown', changeColor)
+//       grid.appendChild(gridElement)
+//     }
+//   }
+
+//   function changeColor(e) {
+//     if (e.type === 'mouseover' && !mouseDown) return
+//     if (currentMode === 'rainbow') {
+//       const randomR = Math.floor(Math.random() * 256)
+//       const randomG = Math.floor(Math.random() * 256)
+//       const randomB = Math.floor(Math.random() * 256)
+//       e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+//     } else if (currentMode === 'color') {
+//       e.target.style.backgroundColor = currentColor
+//     } else if (currentMode === 'eraser') {
+//       e.target.style.backgroundColor = '#fefefe'
+//     }
+//   }
