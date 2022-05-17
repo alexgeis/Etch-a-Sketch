@@ -100,3 +100,22 @@ function clearGrid() {
     gridEl.style.backgroundColor = "#fefefe";
   }
 }
+
+//Functions to make
+let gridSize = 16;
+grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+let gridCellArr = [];
+const gridCell = document.createElement("div");
+addClass(gridCell, "grid-element");
+for (let i = 0; i < gridSize; i++) {
+  gridCellArr.push(gridCell);
+}
+grid.append(...gridCellArr);
+// 16x16 grid
+// javascript Dom manipulation to
+//add this 16x16 grid to the #grid element .appendChild()
+// add class grid-element
+// add event listeners
+//  e.target.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
+
+//change grid size

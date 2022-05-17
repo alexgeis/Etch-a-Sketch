@@ -102,6 +102,7 @@
 }
 .grid-element {
     background-color: cadetblue;
+    border: 1px black solid;
 }
 
 
