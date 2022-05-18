@@ -101,8 +101,7 @@
     box-shadow: rgb(0 0 0 / 50%) 0px 3px 8px;
 }
 .grid-element {
-    background-color: cadetblue;
-    border: 1px black solid;
+    user-select: none;
 }
 
 

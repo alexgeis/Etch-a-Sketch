@@ -77,6 +77,11 @@ gridSlider.addEventListener("mousemove", function (e) {
 gridSlider.addEventListener("change", function (e) {
   updateSize(e.target.value);
 });
+//grid event listeners
+for (let gridEl of Array.from(gridEls)) {
+  gridEl.addEventListener("click", updateGridEl);
+  addClass(gridEl, "grid-element");
+}
 
 //registering mousedown/up state variable w/ body object
 let mouseDown = false;
@@ -127,61 +132,39 @@ function clearGrid() {
   //   grid.innerHTML = ''
 }
 
-function updateGridEl(e) {
-  e.stopPropagation();
-  let element = e.target;
-  let chosenColor = colorPicker.value;
-  if (element.style.backgroundColor !== chosenColor)
-    element.style.backgroundColor = chosenColor;
-  else if (element.style.backgroundColor === chosenColor)
-    element.style.backgroundColor = "#fefefe";
+// function updateGridEl(e) {
+//   e.stopPropagation();
+//   let element = e.target;
+//   let chosenColor = colorPicker.value;
+//   if (element.style.backgroundColor !== chosenColor)
+//     element.style.backgroundColor = chosenColor;
+//   else if (element.style.backgroundColor === chosenColor)
+//     element.style.backgroundColor = "#fefefe";
+// }
+
+function setupGrid(size) {
+  grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+  for (let i = 0; i < size * size; i++) {
+    const gridElement = document.createElement("div");
+    gridElement.classList.add("grid-element");
+    gridElement.addEventListener("mouseover", changeColor);
+    gridElement.addEventListener("mousedown", changeColor);
+    grid.appendChild(gridElement);
+  }
 }
 
-//Functions to make
-let gridSize = 16;
-grid.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
-grid.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
-let gridCellArr = [];
-const gridCell = document.createElement("div");
-// addClass(gridCell, "grid-element");
-for (let i = 0; i < gridSize; i++) {
-  gridCellArr.push(gridCell);
+function changeColor(e) {
+  if (e.type === "mouseover" && !mouseDown) return;
+  if (currentMode === "rainbow") {
+    const randomR = Math.floor(Math.random() * 256);
+    const randomG = Math.floor(Math.random() * 256);
+    const randomB = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+  } else if (currentMode === "color") {
+    e.target.style.backgroundColor = currentColor;
+  } else if (currentMode === "eraser") {
+    e.target.style.backgroundColor = "#fefefe";
+  }
 }
-console.log(gridCellArr);
-grid.append(...gridCellArr);
-
-//grid event listeners
-for (let gridEl of Array.from(gridEls)) {
-  gridEl.addEventListener("click", updateGridEl);
-  addClass(gridEl, "grid-element");
-  // .addEventListener("mouseup",stopUpdateGridEl)
-}
-
-//change grid size
-
-// function setupGrid(size) {
-//     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`
-//     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`
-
-//     for (let i = 0; i < size * size; i++) {
-//       const gridElement = document.createElement('div')
-//       gridElement.classList.add("grid-element")
-//       gridElement.addEventListener('mouseover', changeColor)
-//       gridElement.addEventListener('mousedown', changeColor)
-//       grid.appendChild(gridElement)
-//     }
-//   }
-
-//   function changeColor(e) {
-//     if (e.type === 'mouseover' && !mouseDown) return
-//     if (currentMode === 'rainbow') {
-//       const randomR = Math.floor(Math.random() * 256)
-//       const randomG = Math.floor(Math.random() * 256)
-//       const randomB = Math.floor(Math.random() * 256)
-//       e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
-//     } else if (currentMode === 'color') {
-//       e.target.style.backgroundColor = currentColor
-//     } else if (currentMode === 'eraser') {
-//       e.target.style.backgroundColor = '#fefefe'
-//     }
-//   }
