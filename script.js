@@ -85,6 +85,12 @@ for (let gridEl of Array.from(gridEls)) {
 
 //registering mousedown/up state variable w/ body object
 let mouseDown = false;
+// document.body.addEventListener("mousedown", function () {
+//   mouseDown = true;
+// });
+// document.body.addEventListener("mouseup", function () {
+//   mouseDown = false;
+// });
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
@@ -111,9 +117,9 @@ function activateButton(newMode) {
 
 //grid functions
 function updateSize(value) {
-  setCurrentSize(value);
-  updateSizeText(value);
-  reloadGrid();
+  setCurrentSize(value); //update state
+  updateSizeText(value); //update text
+  reloadGrid(); //update grid
 }
 
 function updateSizeText(value) {
@@ -146,6 +152,8 @@ function setupGrid(size) {
 }
 
 function changeColor(e) {
+  //returns function if the mouseover is done while the mouse is NOT held down
+  //allows mouse down event + mouseover to change color as the mouse is held down
   if (e.type === "mouseover" && !mouseDown) return;
   if (currentMode === "random") {
     const randomR = Math.floor(Math.random() * 256);
