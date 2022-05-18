@@ -18,11 +18,13 @@ const currentYear = document.getElementById("currentYear");
 currentYear.textContent = new Date().getFullYear();
 
 //defaults
-const DEFAULT_COLOR = "#333";
+const savedColor = localStorage.getItem("savedColor");
+const DEFAULT_COLOR = "#333" || savedColor;
 const DEFAULT_MODE = "color";
 const DEFAULT_SIZE = 24;
 
 //state variables
+
 let currentColor = DEFAULT_COLOR;
 let currentMode = DEFAULT_MODE;
 let currentSize = DEFAULT_SIZE;
@@ -30,6 +32,7 @@ let currentSize = DEFAULT_SIZE;
 //state update functions
 function setCurrentColor(newColor) {
   currentColor = newColor;
+  localStorage.setItem("savedColor", currentColor);
 }
 function setCurrentMode(newMode) {
   activateButton(newMode);
@@ -175,4 +178,5 @@ function changeColor(e) {
 window.onload = () => {
   setupGrid(DEFAULT_SIZE);
   activateButton(DEFAULT_MODE);
+  colorPicker.value = savedColor;
 };
