@@ -75,7 +75,7 @@ gridSlider.addEventListener("mousemove", function (e) {
   updateSizeText(e.target.value);
 });
 gridSlider.addEventListener("change", function (e) {
-  changeSize(e.target.value);
+  updateSize(e.target.value);
 });
 
 //registering mousedown/up state variable w/ body object
@@ -105,9 +105,28 @@ function activateButton(newMode) {
 }
 
 //grid functions
-function updateSizeText() {
+function updateSize(value) {
+  setCurrentSize(value);
+  updateSizeText(value);
+  reloadGrid();
+}
+
+function updateSizeText(value) {
   gridValue.textContent = `${value} x ${value}`;
 }
+
+function reloadGrid() {
+  clearGrid();
+  setupGrid(currentSize);
+}
+
+function clearGrid() {
+  for (let gridEl of Array.from(gridEls)) {
+    gridEl.style.backgroundColor = "#fefefe";
+  }
+  //   grid.innerHTML = ''
+}
+
 function updateGridEl(e) {
   e.stopPropagation();
   let element = e.target;
@@ -116,12 +135,6 @@ function updateGridEl(e) {
     element.style.backgroundColor = chosenColor;
   else if (element.style.backgroundColor === chosenColor)
     element.style.backgroundColor = "#fefefe";
-}
-
-function clearGrid() {
-  for (let gridEl of Array.from(gridEls)) {
-    gridEl.style.backgroundColor = "#fefefe";
-  }
 }
 
 //Functions to make
@@ -143,13 +156,6 @@ for (let gridEl of Array.from(gridEls)) {
   addClass(gridEl, "grid-element");
   // .addEventListener("mouseup",stopUpdateGridEl)
 }
-
-// 16x16 grid
-// javascript Dom manipulation to
-//add this 16x16 grid to the #grid element .appendChild()
-// add class grid-element
-// add event listeners
-//  e.target.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`
 
 //change grid size
 
