@@ -1,36 +1,40 @@
 const colorPicker = document.querySelector("#colorPicker");
 const buttons = document.querySelectorAll("button");
 const btnColor = document.querySelector("#btnColor");
-const btnRainbow = document.querySelector("#btnRainbow");
+const btnRandom = document.querySelector("#btnRandom");
 const btnEraser = document.querySelector("#btnEraser");
 const btnClear = document.querySelector("#btnClear");
+const gridValue = document.querySelector("#gridValue");
 const gridSlider = document.querySelector("#gridSlider");
 const grid = document.querySelector("#grid");
 const gridEls = document.querySelectorAll(".grid-element");
+
 //animation selectors
 const circle1 = document.querySelector("#circle1");
 const circle2 = document.querySelector("#circle2");
+
 //date
 const currentYear = document.getElementById("currentYear");
 currentYear.textContent = new Date().getFullYear();
+
 //defaults
 const DEFAULT_COLOR = "#333";
 const DEFAULT_MODE = "color";
 const DEFAULT_SIZE = 16;
+
 //state variables
 let currentColor = DEFAULT_COLOR;
 let currentMode = DEFAULT_MODE;
 let currentSize = DEFAULT_SIZE;
+
 //state update functions
 function setCurrentColor(newColor) {
   currentColor = newColor;
 }
-
 function setCurrentMode(newMode) {
   activateButton(newMode);
   currentMode = newMode;
 }
-
 function setCurrentSize(newSize) {
   currentSize = newSize;
 }
@@ -41,12 +45,10 @@ function hasClass(el, className) {
     ? el.classList.contains(className)
     : new RegExp("\\b" + className + "\\b").test(el.className);
 }
-
 function addClass(el, className) {
   if (el.classList) el.classList.add(className);
   else if (!hasClass(el, className)) el.className += " " + className;
 }
-
 function removeClass(el, className) {
   if (el.classList) el.classList.remove(className);
   else
@@ -54,30 +56,37 @@ function removeClass(el, className) {
       new RegExp("\\b" + className + "\\b", "g"),
       ""
     );
-
-  /*
-   REGEX EXPLAINED
-   \ = reg ex boundaries
-   \b = word boundaries
-   g = global search
-*/
 }
+/*
+ REGEX EXPLAINED
+ \ = reg ex boundaries
+ \b = word boundaries
+ g = global search
+*/
 
-// document.body.addEventListener("click", print);
-// function print(e) {
-//   console.log(e);
-// }
+//button event listeners
+btnColor.addEventListener("click", setCurrentMode("color"));
+btnRandom.addEventListener("click", setCurrentMode("random"));
+btnEraser.addEventListener("click", setCurrentMode("eraser"));
+colorPicker.addEventListener("change", function (e) {
+  setCurrentColor(e.target.value);
+});
+gridSlider.addEventListener("mousemove", function (e) {
+  updateSizeText(e.target.value);
+});
+gridSlider.addEventListener("change", function (e) {
+  changeSize(e.target.value);
+});
 
 //registering mousedown/up state variable w/ body object
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-//button event listeners
-for (let button of Array.from(buttons)) {
-  button.addEventListener("click", updateActiveButton);
+//button functions
+function activateButton(newMode) {
+  removeActive();
 }
-
 function updateActiveButton(e) {
   if (e.target.id === "btnClear") {
     //prevent clear button from being styled upon click
@@ -106,6 +115,10 @@ function activeButton(e) {
   addClass(e.target, "active");
 }
 
+//grid functions
+function updateSizeText() {
+  gridValue.textContent = `${value} x ${value}`;
+}
 function updateGridEl(e) {
   e.stopPropagation();
   let element = e.target;

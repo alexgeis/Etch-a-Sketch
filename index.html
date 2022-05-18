@@ -16,10 +16,11 @@
       <div class="settings">
         <input type="color" value="#ff0000" id="colorPicker" />
         <button class="btn color active" id="btnColor">Choose Color</button>
-        <button class="btn rainbow" id="btnRainbow">Random Color</button>
+        <button class="btn random" id="btnRandom">Random Color</button>
         <button class="btn eraser" id="btnEraser">Eraser Tool</button>
         <button class="btn clear" id="btnClear">Clear Canvas</button>
-        <div class="grid-slider" id="gridSlider"></div>
+        <div id="gridValue">16 x 16</div>
+        <input class="grid-slider" id="gridSlider" type="range" value="16" min="1" max="64"></input>
       </div>
       <div class="grid-container">
         <div class="grid" id="grid"></div>
