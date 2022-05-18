@@ -83,7 +83,10 @@
     color: var(--primary-light);
     transform: scale(1.05);
 }
-
+#gridValue {
+  text-align: center;
+  font-size: 24px;
+}
 
 /* GRID */
 .grid-container {
@@ -136,6 +139,7 @@ margin-right: auto;
     right: 0;
     text-align: center;
 }
+
 /* FOOTER */
 .footer {
     position: absolute;
