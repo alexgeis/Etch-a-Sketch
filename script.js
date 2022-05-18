@@ -132,16 +132,6 @@ function clearGrid() {
   //   grid.innerHTML = ''
 }
 
-// function updateGridEl(e) {
-//   e.stopPropagation();
-//   let element = e.target;
-//   let chosenColor = colorPicker.value;
-//   if (element.style.backgroundColor !== chosenColor)
-//     element.style.backgroundColor = chosenColor;
-//   else if (element.style.backgroundColor === chosenColor)
-//     element.style.backgroundColor = "#fefefe";
-// }
-
 function setupGrid(size) {
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
@@ -157,7 +147,7 @@ function setupGrid(size) {
 
 function changeColor(e) {
   if (e.type === "mouseover" && !mouseDown) return;
-  if (currentMode === "rainbow") {
+  if (currentMode === "random") {
     const randomR = Math.floor(Math.random() * 256);
     const randomG = Math.floor(Math.random() * 256);
     const randomB = Math.floor(Math.random() * 256);
@@ -168,3 +158,8 @@ function changeColor(e) {
     e.target.style.backgroundColor = "#fefefe";
   }
 }
+
+window.onload = () => {
+  setupGrid(DEFAULT_SIZE);
+  activateButton(DEFAULT_MODE);
+};

@@ -98,7 +98,7 @@
     width: 500px;
     height: 500px;
     background-color: var(--secondary-light);
-    box-shadow: rgb(0 0 0 / 50%) 0px 3px 8px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 4px 7px;
 }
 .grid-element {
     user-select: none;
