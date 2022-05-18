@@ -5,13 +5,35 @@ const btnRainbow = document.querySelector("#btnRainbow");
 const btnEraser = document.querySelector("#btnEraser");
 const btnClear = document.querySelector("#btnClear");
 const gridSlider = document.querySelector("#gridSlider");
-const circle1 = document.querySelector("#circle1");
-const circle2 = document.querySelector("#circle2");
 const grid = document.querySelector("#grid");
 const gridEls = document.querySelectorAll(".grid-element");
+//animation selectors
+const circle1 = document.querySelector("#circle1");
+const circle2 = document.querySelector("#circle2");
+//date
 const currentYear = document.getElementById("currentYear");
-
 currentYear.textContent = new Date().getFullYear();
+//defaults
+const DEFAULT_COLOR = "#333";
+const DEFAULT_MODE = "color";
+const DEFAULT_SIZE = 16;
+//state variables
+let currentColor = DEFAULT_COLOR;
+let currentMode = DEFAULT_MODE;
+let currentSize = DEFAULT_SIZE;
+//state update functions
+function setCurrentColor(newColor) {
+  currentColor = newColor;
+}
+
+function setCurrentMode(newMode) {
+  activateButton(newMode);
+  currentMode = newMode;
+}
+
+function setCurrentSize(newSize) {
+  currentSize = newSize;
+}
 
 // HELPER FUNCTIONS
 function hasClass(el, className) {
@@ -45,6 +67,11 @@ function removeClass(el, className) {
 // function print(e) {
 //   console.log(e);
 // }
+
+//registering mousedown/up state variable w/ body object
+let mouseDown = false;
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
 
 //button event listeners
 for (let button of Array.from(buttons)) {
