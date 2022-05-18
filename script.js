@@ -20,7 +20,7 @@ currentYear.textContent = new Date().getFullYear();
 //defaults
 const DEFAULT_COLOR = "#333";
 const DEFAULT_MODE = "color";
-const DEFAULT_SIZE = 16;
+const DEFAULT_SIZE = 24;
 
 //state variables
 let currentColor = DEFAULT_COLOR;
