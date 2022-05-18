@@ -83,36 +83,25 @@ let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
-//button functions
+//button function
 function activateButton(newMode) {
-  removeActive();
-}
-function updateActiveButton(e) {
-  if (e.target.id === "btnClear") {
-    //prevent clear button from being styled upon click
-    removeActive();
-    btnClear.style.backgroundColor = "#ededed";
-    btnClear.style.color = "#333";
-    btnClear.style.transform = "scale(1.00)";
-    clearGrid();
+  //remove 'active' class
+  if (currentMode === "color") {
+    removeClass(btnRandom, "active");
+  } else if (currentMode === "random") {
+    removeClass(btnColor, "active");
+  } else if (currentMode === "eraser") {
+    removeClass(btnEraser, "active");
+  }
+  //add 'active' class
+  if (newMode === "random") {
+    addClass(btnRandom, "active");
+    btnRandom.classList.add("active");
+  } else if (newMode === "color") {
     addClass(btnColor, "active");
-  } else {
-    removeActive();
-    activeButton(e);
+  } else if (newMode === "eraser") {
+    addClass(btnEraser, "active");
   }
-}
-
-function removeActive() {
-  for (let button of Array.from(buttons)) {
-    if (hasClass(button, "active")) {
-      removeClass(button, "active");
-    }
-  }
-}
-
-function activeButton(e) {
-  e.preventDefault();
-  addClass(e.target, "active");
 }
 
 //grid functions
