@@ -65,9 +65,13 @@ function removeClass(el, className) {
 */
 
 //button event listeners
-btnColor.addEventListener("click", setCurrentMode("color"));
-btnRandom.addEventListener("click", setCurrentMode("random"));
-btnEraser.addEventListener("click", setCurrentMode("eraser"));
+let updateBtnColor = () => setCurrentMode("color");
+let updateBtnRandom = () => setCurrentMode("random");
+let updateBtnEraser = () => setCurrentMode("eraser");
+btnColor.addEventListener("click", updateBtnColor);
+btnRandom.addEventListener("click", updateBtnRandom);
+btnEraser.addEventListener("click", updateBtnEraser);
+btnClear.addEventListener("click", reloadGrid);
 colorPicker.addEventListener("change", function (e) {
   setCurrentColor(e.target.value);
 });
@@ -85,21 +89,22 @@ for (let gridEl of Array.from(gridEls)) {
 
 //registering mousedown/up state variable w/ body object
 let mouseDown = false;
-// document.body.addEventListener("mousedown", function () {
-//   mouseDown = true;
-// });
-// document.body.addEventListener("mouseup", function () {
-//   mouseDown = false;
-// });
-document.body.onmousedown = () => (mouseDown = true);
-document.body.onmouseup = () => (mouseDown = false);
+document.body.addEventListener("mousedown", function () {
+  mouseDown = true;
+});
+document.body.addEventListener("mouseup", function () {
+  mouseDown = false;
+});
+// document.body.onmousedown = () => (mouseDown = true);
+// document.body.onmouseup = () => (mouseDown = false);
 
 //button function
 function activateButton(newMode) {
+  console.log("entered function");
   //remove 'active' class
-  if (currentMode === "color") {
+  if (currentMode === "random") {
     removeClass(btnRandom, "active");
-  } else if (currentMode === "random") {
+  } else if (currentMode === "color") {
     removeClass(btnColor, "active");
   } else if (currentMode === "eraser") {
     removeClass(btnEraser, "active");
@@ -132,10 +137,10 @@ function reloadGrid() {
 }
 
 function clearGrid() {
-  for (let gridEl of Array.from(gridEls)) {
-    gridEl.style.backgroundColor = "#fefefe";
-  }
-  //   grid.innerHTML = ''
+  //   for (let gridEl of Array.from(gridEls)) {
+  //     gridEl.style.backgroundColor = "#fefefe";
+  //   }
+  grid.innerHTML = "";
 }
 
 function setupGrid(size) {
