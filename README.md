@@ -82,18 +82,12 @@ style="display: block;
 
 ### Built With
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com)
-- [Node.js](https://nodejs.dev/)
-- [Express](https://expressjs.com/)
-- [MongoDB](https://www.mongodb.com/)
-- [MySQL](https://www.mysql.com/)
-- [JQuery](https://jquery.com)
+- Vanilla JS, CSS, and HTML
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
-
+<!--
 ## Getting Started
 
 Instructions on setting up your project locally.
@@ -124,15 +118,23 @@ This is an example of how to list things you need to use the software and how to
    const API_KEY = "ENTER YOUR API";
    ```
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p> -->
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-Useful examples of how a project can be used. Additional screenshots, code examples, demos, and/or links to more resources.
+Choose Color mode - allows the user to select a color and apply that color to the grid.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Random Color mode - color for each grid unit is randomly generated.
+
+Eraser Tool - remove your coloring by selecting a grid unit.
+
+Clear Canvas - clear all coloring of grid units.
+
+Grid Size selection - choose from 16X16 to 64x64 grid units.
+
+<!-- _For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -200,12 +202,6 @@ Helpful resources and kudos.
 - [Choose an Open Source License](https://choosealicense.com)
 - [Img Shields](https://shields.io)
 - [GitHub Pages](https://pages.github.com)
-- [Font Awesome](https://fontawesome.com)
-- [React Icons](https://react-icons.github.io/react-icons/search)
-- [Markdown Studio](https://readme.so/editor)
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
