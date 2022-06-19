@@ -1,12 +1,3 @@
-#
-
-[Deployed Demo](https://alexgeis.github.io/Etch-a-Sketch/) &larr;
-
-## Future Development
-
-- Different color modes: neon, rainbow, etc.
-  Suggestion: the generative CSS can use a calc() function, as outlined in [this excellent article](https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/) (credit to [@5t3ph](https://github.com/5t3ph))
-
 ## Screenshot
 
 ![Etch-a-Sketch Application Screenshot](./assets/etch-sketch-screenshot.png)
@@ -91,7 +82,7 @@ style="display: block;
     margin-right: auto;
     width: 60%;"/></p></a>
 
-Search and replace keywords: `deployed_link`,`product-screenshot`,`repo_name`, `project_title`, `project_description`
+Search and replace keywords: `product-screenshot`,`repo_name`, `project_title`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -155,10 +146,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-- [x] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-  - [ ] Nested Feature
+- [] - Different color modes: neon, rainbow, etc.
+  Suggestion: the generative CSS can use a calc() function, as outlined in [this excellent article](https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/) (credit to [@5t3ph](https://github.com/5t3ph))
+- [ ] Login/Signup Storage
+- [ ] Back-end server
 
 See the [open issues](https://github.com/alexgeis/repo_name/issues) for a full list of proposed features (and known issues).
 
