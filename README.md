@@ -1,6 +1,6 @@
 ## Screenshot
 
-![Etch-a-Sketch Application Screenshot](./assets/etch-sketch-screenshot.png)
+![Etch-a-Sketch Application Screenshot]()
 
 <div id="top"></div>
 
@@ -23,9 +23,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/alexgeis/repo_name">
+  <!-- <a href="https://github.com/alexgeis/repo_name">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
 <h3 align="center">Etch-a-Sketch</h3>
 
@@ -76,13 +76,13 @@
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 <a href="https://example.com">
 <p align="center">
-<img id="product-screenshot" src="images/screenshot.png" alt="Product Name Screen Shot"
+<img id="product-screenshot" src="./assets/etch-sketch-screenshot.png" alt="Product Name Screen Shot"
 style="display: block;
     margin-left: auto;
     margin-right: auto;
     width: 60%;"/></p></a>
 
-Search and replace keywords: `product-screenshot`,`repo_name`, `project_title`, `project_description`
+Search and replace keywords: `repo_name`, `project_title`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -231,4 +231,4 @@ Helpful resources and kudos.
 [license-url]: https://github.com/alexgeis/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alexngeis
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: ./assets/etch-sketch-screenshot.png
