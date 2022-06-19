@@ -142,8 +142,8 @@ Grid Size selection - choose from 16X16 to 64x64 grid units.
 
 ## Roadmap
 
-- [] - Different color modes: neon, rainbow, etc.
-  Suggestion: the generative CSS can use a calc() function, as outlined in [this excellent article](https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/) (credit to [@5t3ph](https://github.com/5t3ph))
+- [ ] - Different color modes: neon, rainbow, etc.
+    Suggestion: the generative CSS can use a calc() function, as outlined in [this excellent article](https://moderncss.dev/practical-uses-of-css-math-functions-calc-clamp-min-max/) (credit to [@5t3ph](https://github.com/5t3ph))
 - [ ] Login/Signup Storage
 - [ ] Back-end server
 
