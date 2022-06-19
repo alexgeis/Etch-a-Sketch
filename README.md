@@ -1,7 +1,3 @@
-## Screenshot
-
-![Etch-a-Sketch Application Screenshot]()
-
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
@@ -23,7 +19,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/alexgeis/repo_name">
+  <!-- <a href="https://github.com/alexgeis/Etch-a-Sketch">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a> -->
 
@@ -32,14 +28,14 @@
   <p align="center">
     Drawing application using vanilla JS,custom CSS/HTML, and local storage. Color and size can be adjusted, as well as a rainbow mode for random colors.
     <br />
-    <a href="https://github.com/alexgeis/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/alexgeis/Etch-a-Sketch"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a id="deployed_link" href="https://alexgeis.github.io/Etch-a-Sketch/">View Demo</a>
     ·
-    <a href="https://github.com/alexgeis/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/alexgeis/Etch-a-Sketch/issues">Report Bug</a>
     ·
-    <a href="https://github.com/alexgeis/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/alexgeis/Etch-a-Sketch/issues">Request Feature</a>
   </p>
 </div>
 
@@ -82,8 +78,6 @@ style="display: block;
     margin-right: auto;
     width: 60%;"/></p></a>
 
-Search and replace keywords: `repo_name`, `project_title`, `project_description`
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Built With
@@ -119,7 +113,7 @@ This is an example of how to list things you need to use the software and how to
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/alexgeis/repo_name.git
+   git clone https://github.com/alexgeis/Etch-a-Sketch.git
    ```
 3. Install NPM packages
    ```sh
@@ -151,7 +145,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Login/Signup Storage
 - [ ] Back-end server
 
-See the [open issues](https://github.com/alexgeis/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/alexgeis/Etch-a-Sketch/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -193,7 +187,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Alex Geis - siegxela@gmail.com
 
-Project Link: [https://github.com/alexgeis/repo_name](https://github.com/alexgeis/repo_name)
+Project Link: [https://github.com/alexgeis/Etch-a-Sketch](https://github.com/alexgeis/Etch-a-Sketch)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -218,17 +212,17 @@ Helpful resources and kudos.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-<!-- [contributors-shield]: https://img.shields.io/github/contributors/alexgeis/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/alexgeis/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/alexgeis/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/alexgeis/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/alexgeis/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/alexgeis/repo_name/stargazers -->
+<!-- [contributors-shield]: https://img.shields.io/github/contributors/alexgeis/Etch-a-Sketch.svg?style=for-the-badge
+[contributors-url]: https://github.com/alexgeis/Etch-a-Sketch/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alexgeis/Etch-a-Sketch.svg?style=for-the-badge
+[forks-url]: https://github.com/alexgeis/Etch-a-Sketch/network/members
+[stars-shield]: https://img.shields.io/github/stars/alexgeis/Etch-a-Sketch.svg?style=for-the-badge
+[stars-url]: https://github.com/alexgeis/Etch-a-Sketch/stargazers -->
 
-[issues-shield]: https://img.shields.io/github/issues/alexgeis/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/alexgeis/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/alexgeis/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/alexgeis/repo_name/blob/master/LICENSE.txt
+[issues-shield]: https://img.shields.io/github/issues/alexgeis/Etch-a-Sketch.svg?style=for-the-badge
+[issues-url]: https://github.com/alexgeis/Etch-a-Sketch/issues
+[license-shield]: https://img.shields.io/github/license/alexgeis/Etch-a-Sketch.svg?style=for-the-badge
+[license-url]: https://github.com/alexgeis/Etch-a-Sketch/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alexngeis
 [product-screenshot]: ./assets/etch-sketch-screenshot.png
