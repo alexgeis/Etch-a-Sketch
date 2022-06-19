@@ -19,9 +19,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <!-- <a href="https://github.com/alexgeis/Etch-a-Sketch">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a> -->
+  <a href="https://github.com/alexgeis/Etch-a-Sketch">
+    <img src="./favicon.ico" alt="Logo" width="80" height="80">
+  </a>
 
 <h3 align="center">Etch-a-Sketch</h3>
 
