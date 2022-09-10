@@ -116,7 +116,7 @@ function activateButton(newMode) {
 	//add 'active' class
 	if (newMode === "random") {
 		addClass(btnRandom, "active");
-		btnRandom.classList.add("active");
+		// btnRandom.classList.add("active");
 	} else if (newMode === "color") {
 		addClass(btnColor, "active");
 	} else if (newMode === "eraser") {
