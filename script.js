@@ -68,13 +68,14 @@ function removeClass(el, className) {
 */
 
 //button event listeners
-let updateBtnColor = () => setCurrentMode("color");
-let updateBtnRandom = () => setCurrentMode("random");
-let updateBtnEraser = () => setCurrentMode("eraser");
 btnColor.addEventListener("click", updateBtnColor);
+let updateBtnColor = () => setCurrentMode("color");
 btnRandom.addEventListener("click", updateBtnRandom);
+let updateBtnRandom = () => setCurrentMode("random");
 btnEraser.addEventListener("click", updateBtnEraser);
+let updateBtnEraser = () => setCurrentMode("eraser");
 btnClear.addEventListener("click", reloadGrid);
+
 colorPicker.addEventListener("change", function (e) {
 	setCurrentColor(e.target.value);
 });
