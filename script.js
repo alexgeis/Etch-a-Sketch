@@ -104,7 +104,6 @@ document.body.addEventListener("mouseup", function () {
 
 //button function
 function activateButton(newMode) {
-	console.log("entered function");
 	//remove 'active' class
 	if (currentMode === "random") {
 		removeClass(btnRandom, "active");
